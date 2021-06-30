@@ -40,4 +40,16 @@ public class UserService {
 		findById(id);
 		repo.deleteById(id);
 	}
+	
+	public User update(User obj) {
+	User newObj = findById(obj.getId()); // newObj é o objeto original do BD
+	updateData(newObj, obj); // responssável por copiar os dados originais do obj para o newObj
+	return repo.save(newObj);
+	}
+
+// responssável por copiar os dados originais do obj para o newObj
+	private void updateData(User newObj, User obj) {
+		newObj.setName(obj.getName());
+		newObj.setEmail(obj.getEmail());
+	}
 }
