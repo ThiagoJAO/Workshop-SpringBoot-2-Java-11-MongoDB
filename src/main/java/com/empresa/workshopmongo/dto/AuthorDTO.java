@@ -1,7 +1,6 @@
 package com.empresa.workshopmongo.dto;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import com.empresa.workshopmongo.domain.User;
 
